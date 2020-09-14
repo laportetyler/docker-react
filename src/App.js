@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          General Kenobi
+          General Kenobi!
         </a>
       </header>
     </div>
