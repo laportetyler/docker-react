@@ -1,0 +1,16 @@
+FROM node:alpine
+
+WORKDIR '/app'
+
+COPY package.json .
+
+RUN npm install
+
+# not strictly neccessary as we have volume mount in docker-compose.yml
+# left in for reminder that this is needed if not using docker-compose
+COPY . .
+
+CMD ["npm", "run", "start"]
+
+
+# docker run -it -p 3000:3000 CONTAINER_ID
