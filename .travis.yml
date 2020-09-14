@@ -1,0 +1,10 @@
+language: generic
+sudo: required
+services:
+    - docker
+
+before_install:
+    - docker build -t laportetyler/docker-react -f Dockerfile.dev .
+
+script:
+    - docker run -e CI=true laportetyler/docker-react npm run test
